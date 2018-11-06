@@ -1,4 +1,4 @@
-package com.example.mcrm.DataObject;
+package com.example.mcrm.models;
 
 public class DoctorSchedule {
     private String day;

@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+      fail-on-empty-beans: false
+    date-format: yyyy-MM-dd HH:mm:ss:SSS
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: false
+        format_sql: true
+        generate_statistics: true
+        enable_lazy_load_no_trans: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+logging:
+  path: /logs
+  file: mcrm.log
+  level:
+    root: info
